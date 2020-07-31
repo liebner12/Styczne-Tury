@@ -1,38 +1,351 @@
-.App {
+/****global section****/
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: rgb(233, 230, 227);
+}
+
+.my-section {
+  padding: 4rem 0;
+}
+
+/****nav-section****/
+
+#nav-icon {
+  width: 30px;
+  height: 20px;
+}
+
+.animated-icon {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.animated-icon div {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.animated-icon div {
+  background: white;
+}
+
+.animated-icon div:nth-child(1) {
+  top: 4px;
+}
+
+.animated-icon div:nth-child(2) {
+  top: 14px;
+}
+
+.animated-icon div:nth-child(3) {
+  top: 24px;
+}
+
+.animated-icon.open div:nth-child(1) {
+  top: 15px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.animated-icon.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.animated-icon.open div:nth-child(3) {
+  top: 15px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#top-nav {
+  transition: 0.3s;
+}
+
+.nav-link {
+  margin-left: 30px;
+}
+
+.bg-nav {
+  background-color: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(15px);
+}
+
+/****home-section****/
+
+#myCarousel {
+  width: 100%;
+}
+
+.carousel-item {
+  height: 100vh;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100vh;
+}
+
+#main-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  color: white;
+  z-index: 1;
+}
+
+.between {
+  margin-right: 0.5rem;
+}
+
+/****about section****/
+
+#about-section {
+  display: grid;
+  place-items: center;
+}
+
+.my-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 8rem;
+}
+
+#first-object, #fifth-object {
+  margin-right: 100px;
+}
+
+#third-object {
+  margin-left: 100px;
+}
+
+#about-section .card {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+#about-section .card:nth-child(2) {
+  offset: 10px;
+}
+
+#about-section .card:nth-child(3) {
+  margin-bottom: 0;
+}
+
+#background-wave {
+  position: relative;
+  background: url("./components/images/wave.svg") no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  left: 80%;
+}
+
+/****offert section****/
+
+#offert-section {
+  background: url("./components/images/rysunek.svg") no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgb(30, 30, 30);
+  display: grid;
+  place-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#offert-section .card {
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0 8px 6px -6px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#offert-section .card .card-img-top {
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#offert-section img {
+  object-fit: cover;
+  height: 20rem;
+}
+
+.overlay {
+  position: absolute;
+  border-radius: 2rem;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+#offert-section .card .overlay:hover {
+  opacity: 1;
+  background-color: rgb(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px) !important;
+}
+
+.mybtn {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  right: 0;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background-color: rgb(35, 148, 63);
+  
 }
 
-.App-link {
-  color: #61dafb;
+.mybtn:hover {
+  background-color: rgb(40, 160, 80);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mybtn-text {
+  width: 100%;
+  padding: 1rem;
+}
+
+.mybtn a {
+  text-decoration: none;
+}
+
+
+/****contact****/
+
+#map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  margin-bottom: 1rem;
+}
+
+.my-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  grid-gap: 10rem;
+  color: rgb(40, 40, 40);
+}
+
+.my-grid h2 {
+  font-size: 3rem;
+}
+
+.my-grid p {
+  font-size: 1.5rem;
+}
+
+.ending-link {
+  margin: 2rem 0;
+}
+
+.my-grid a {
+  color: rgb(40, 40, 40);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.my-grid i {
+  font-weight: 700;
+}
+
+.ending {
+  text-align: center;
+}
+
+.item-page {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+/****media queries****/
+
+@media (max-width: 992px) {
+  .display-2 {
+    font-size: 2.8rem;
   }
-  to {
-    transform: rotate(360deg);
+  .carousel-control-prev {
+    display: none;
+  }
+  .carousel-control-next {
+    display: none;
+  }
+  .navbar-nav {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  .nav-link {
+    margin-bottom: 40px;
+    margin-left: 0px;
+  }
+  .my-container {
+    grid-template-columns: 1fr;
+    grid-column-gap: 8rem;
+  }
+  #first-object, #third-object, #fifth-object {
+    margin: 0;
+    order: 1;
+  }
+  #second-object, #fourth-object {
+    margin-bottom: 1rem;
+  }
+  #offert-section {
+    background-size: contain;
+  }
+  #offert-section .card {
+    margin-bottom: 2rem;
+  }
+  .my-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-gap: 2rem;
+    grid-template-rows: 1fr 1fr;
   }
 }
