@@ -19,8 +19,7 @@ class About extends React.Component {
             </div>
             <div id="second-object">
               <h1>
-                Jesteśmy profesjonalni możesz nam zaufać{" "}
-                <i className="fas fa-bus"></i>
+                Jesteśmy profesjonalni <i className="fas fa-bus"></i>
               </h1>
             </div>
             <div id="third-object">

@@ -1,10 +1,11 @@
 import React from "react";
+
+import Header from "./components/Header/Header.js";
 import About from "./components/Main/About.js";
 import Offert from "./components/Main/Offert.js";
-import Header from "./components/Header/Header.js";
 import Footer from "./components/Footer/Footer.js";
 
-class MainPage extends React.Component {
+class Main extends React.Component {
   render() {
     return (
       <div>
@@ -17,4 +18,4 @@ class MainPage extends React.Component {
   }
 }
 
-export default MainPage;
+export default Main;

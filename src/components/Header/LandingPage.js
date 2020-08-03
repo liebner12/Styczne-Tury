@@ -1,8 +1,8 @@
 import React from "react";
-import wallpaper1 from "../images/wallpaper-5-small.jpg";
+import wallpaper3 from "../images/wallpaper-5-small.jpg";
 import wallpaper2 from "../images/wallpaper-6-small.jpg";
-import wallpaper3 from "../images/wallpaper-8-small.jpg";
-
+import wallpaper1 from "../images/wallpaper-8-small.jpg";
+import { HashLink as Link } from "react-router-hash-link";
 class LandingPage extends React.Component {
   render() {
     return (
@@ -15,18 +15,18 @@ class LandingPage extends React.Component {
             <p className="lead font-weight-bold">
               Jesteśmy najlepsi w tym co robimy!
             </p>
-            <a className="btn btn-primary between" href="#about-section">
+            <Link className="btn btn-primary btn-gap" to="/#about-section">
               Sprawdź nas!
-            </a>
-            <a className="btn btn-warning" href="#contact-section">
+            </Link>
+            <Link className="btn btn-warning" to="/#contact-section">
               Kontakt
-            </a>
+            </Link>
             <div className="glyphicon glyphicon-star" aria-hidden="true"></div>
           </div>
         </div>
         <div
           id="carouselExampleIndicators"
-          className="carousel slide"
+          className="carousel slide carousel-fade"
           data-ride="carousel"
         >
           <ol className="carousel-indicators">

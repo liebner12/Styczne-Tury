@@ -14,11 +14,19 @@ html, body {
   padding: 4rem 0;
 }
 
+.btn-gap {
+  margin: 0 0.5rem 0 0;
+}
+
 /****nav-section****/
 
 #nav-icon {
   width: 30px;
   height: 20px;
+}
+
+.navbar-toggler {
+  border: none;
 }
 
 .animated-icon {
@@ -104,17 +112,14 @@ html, body {
   backdrop-filter: blur(15px);
 }
 
+
+
 /****home-section****/
-
-#myCarousel {
-  width: 100%;
-}
-
-.carousel-item {
+#landing-page .carousel-item {
   height: 100vh;
 }
 
-.carousel-item img {
+#landing-page .carousel-item img {
   object-fit: cover;
   height: 100vh;
 }
@@ -123,21 +128,21 @@ html, body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
   color: white;
-  z-index: 1;
+  z-index: 2;
+}
+.carousel-control-next, .carousel-control-prev{
+  z-index: 3;
 }
 
-.between {
-  margin-right: 0.5rem;
-}
+
 
 /****about section****/
-
-#about-section {
-  display: grid;
-  place-items: center;
-}
 
 .my-container {
   display: grid;
@@ -180,12 +185,21 @@ html, body {
 /****offert section****/
 
 #offert-section {
-  background: url("./components/images/rysunek.svg") no-repeat center center fixed;
-  background-size: cover;
   background-color: rgb(30, 30, 30);
   display: grid;
   place-items: center;
   text-align: center;
+}
+
+.offert-text {
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+.offert-text hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, rgb(1, 128, 174), rgb(5, 141, 66));
 }
 
 #offert-section .card {
@@ -214,7 +228,6 @@ html, body {
   display: grid;
   place-items: center;
   text-align: center;
-  cursor: pointer;
 }
 
 #offert-section .card .overlay:hover {
@@ -232,7 +245,6 @@ html, body {
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
   background-color: rgb(35, 148, 63);
-  
 }
 
 .mybtn:hover {
@@ -247,7 +259,6 @@ html, body {
 .mybtn a {
   text-decoration: none;
 }
-
 
 /****contact****/
 
@@ -295,11 +306,33 @@ html, body {
   text-align: center;
 }
 
-.item-page {
-  display: grid;
-  height: 100vh;
-  place-items: center;
+/***item-page***/
+
+#item-section {
+  min-height: 100vh;
+  background-color: rgb(30, 30, 30);
+  display: flex;
+  align-items: center;
 }
+
+#item-section .col-md{
+  align-self: center;
+}
+
+#item-section .carousel-item {
+  height: 35rem;
+  border-radius: 2rem;
+}
+
+#item-section .carousel-item img {
+  height: 35rem;
+  width: 100%;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+
+
 
 /****media queries****/
 
@@ -336,9 +369,6 @@ html, body {
   #second-object, #fourth-object {
     margin-bottom: 1rem;
   }
-  #offert-section {
-    background-size: contain;
-  }
   #offert-section .card {
     margin-bottom: 2rem;
   }
@@ -348,4 +378,8 @@ html, body {
     grid-gap: 2rem;
     grid-template-rows: 1fr 1fr;
   }
+  .text-grid{
+    margin-bottom: 2rem;
+  }
+  
 }

@@ -1,5 +1,7 @@
 import React, { lazy, Suspense } from "react";
-import GoogleApiWrapper from "./Map";
+import LazyLoad from "react-lazyload";
+
+const GoogleApiWrapper = lazy(() => import("./Map"));
 
 class Contact extends React.Component {
   render() {
@@ -52,8 +54,11 @@ class Contact extends React.Component {
               </div>
             </div>
             <div id="map">
-  
-                <GoogleApiWrapper />
+              <Suspense fallback={<p>Loading...</p>}>
+                <LazyLoad>
+                  <GoogleApiWrapper />
+                </LazyLoad>
+              </Suspense>
             </div>
           </div>
         </div>
