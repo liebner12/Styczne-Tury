@@ -1,5 +1,6 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import Item from "./Items";
 class Trip extends React.Component {
   render() {
     return (
@@ -7,26 +8,7 @@ class Trip extends React.Component {
         <div className="container">
           <div className="row">
             <div className="text-grid col-md">
-              <h1 className="title">
-                {this.props.match.params.id == 1
-                  ? "Wycieczka do Warszawy"
-                  : this.props.match.params.id == 2
-                  ? "Wycieczka nad Gdańska"
-                  : "Wycieczka do Zakopanego"}
-              </h1>
-              <h3>
-                {this.props.match.params.id == 1 ||
-                this.props.match.params.id == 3
-                  ? "Czas trwania: 3 dni"
-                  : "Czas trwania: 2 dni"}
-              </h3>
-              <p className="description">
-                {this.props.match.params.id == 1
-                  ? "Pierwszego dnia zwiedzanie miasta z przewodnikiem. Drugiego Kulisy Telewizji Polskie oraz Muzeum Powstania Warszawskiego. Trzeciego Centrum Nauki Kopernik."
-                  : this.props.match.params.id == 2
-                  ? "Dnia pierwszego zwiedzanie Gdańska oraz rejs statekiem, drugiego przejazd do Westerplatte i Molo Orłowo"
-                  : "Pierwszy dzień zdobycie Morskiego Oka oraz dolina pięciu stawów! Drugiego dnia dolina gąsiecnicowa, a trzeciego pobyt w termach oraz w restauracji pani Magdy Gessler"}
-              </p>
+              <Item params={this.props.match.params.id} />
               <a className="btn btn-warning text-dark btn-gap">
                 Zarezerwuj wycieczkę!
               </a>
