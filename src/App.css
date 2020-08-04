@@ -154,15 +154,14 @@ html, body {
 }
 
 #first-object, #fifth-object {
-  
   margin-right: 100px;
-  
 }
-.fade-in{
-  position: relative;
+
+.fade-in {
   animation-name: slide-in-left;
   animation-duration: 1s;
 }
+
 #third-object {
   margin-left: 100px;
 }
@@ -402,13 +401,13 @@ html, body {
   }
 }
 
-@keyframes slide-in-left{
-  0%{
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-30%);
     opacity: 0;
-    left: -50px;
   }
-  100%{
+  100% {
+    transform: translateX(0);
     opacity: 1;
-    left: 0;
   }
 }
