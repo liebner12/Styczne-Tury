@@ -20,7 +20,7 @@ class Offert extends React.Component {
           <div>
             <div className="row">
               <div className="col-md-4">
-                <div className="card bg-dark text-white">
+                <div className="card bg-dark text-white box">
                   <div className="card-img-top st"></div>
                   <div className="overlay text-white">
                     <div className="container">
@@ -49,7 +49,7 @@ class Offert extends React.Component {
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="card bg-dark text-white">
+                <div className="card bg-dark text-white box">
                   <div className="card-img-top nd"></div>
                   <div className="overlay text-white">
                     <div className="container">
@@ -78,7 +78,7 @@ class Offert extends React.Component {
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="card bg-dark text-white">
+                <div className="card bg-dark text-white box">
                   <div className="card-img-top rd"></div>
                   <div className="overlay text-white">
                     <div className="container">

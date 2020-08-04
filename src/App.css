@@ -154,9 +154,15 @@ html, body {
 }
 
 #first-object, #fifth-object {
+  
   margin-right: 100px;
+  
 }
-
+.fade-in{
+  position: relative;
+  animation-name: slide-in-left;
+  animation-duration: 1s;
+}
 #third-object {
   margin-left: 100px;
 }
@@ -339,10 +345,11 @@ html, body {
   object-fit: cover;
 }
 
-#item-section h2{
+#item-section h2 {
   font-size: 1.5rem;
 }
-#item-section h3{
+
+#item-section h3 {
   font-size: 1.2rem;
 }
 
@@ -392,5 +399,16 @@ html, body {
   }
   .text-grid {
     margin-bottom: 2rem;
+  }
+}
+
+@keyframes slide-in-left{
+  0%{
+    opacity: 0;
+    left: -50px;
+  }
+  100%{
+    opacity: 1;
+    left: 0;
   }
 }

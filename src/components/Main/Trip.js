@@ -1,10 +1,12 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import Item from "./Items";
+import ScrollToTop from "../ScrollToTop"
 class Trip extends React.Component {
   render() {
     return (
       <section id="item-section" className="my-section text-white">
+        <ScrollToTop />
         <div className="container">
           <div className="row">
             <div className="text-grid col-md">
