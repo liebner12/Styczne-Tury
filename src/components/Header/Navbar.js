@@ -1,5 +1,5 @@
 import React from "react";
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink as Link } from "react-router-hash-link";
 class Navbar extends React.Component {
   state = {
     active: false,
@@ -26,7 +26,6 @@ class Navbar extends React.Component {
         }
       >
         <div className="container">
-          
           <Link className="navbar-brand" to="/#landing-page">
             StyczneTury
           </Link>
@@ -57,7 +56,11 @@ class Navbar extends React.Component {
                 <Link
                   className="nav-link"
                   to="/#landing-page"
-                  onClick={() => this.setState({ active: !this.state.active })}
+                  onClick={() =>
+                    window.screen.width <= 998
+                      ? this.setState({ active: !this.state.active })
+                      : this.setState({ active: this.state.active })
+                  }
                 >
                   Strona główna
                 </Link>
@@ -66,7 +69,11 @@ class Navbar extends React.Component {
                 <Link
                   className="nav-link"
                   to="/#about-section"
-                  onClick={() => this.setState({ active: !this.state.active })}
+                  onClick={() =>
+                    window.screen.width <= 998
+                      ? this.setState({ active: !this.state.active })
+                      : this.setState({ active: this.state.active })
+                  }
                 >
                   O firmie
                 </Link>
@@ -75,7 +82,11 @@ class Navbar extends React.Component {
                 <Link
                   className="nav-link"
                   to="/#offert-section"
-                  onClick={() => this.setState({ active: !this.state.active })}
+                  onClick={() =>
+                    window.screen.width <= 998
+                      ? this.setState({ active: !this.state.active })
+                      : this.setState({ active: this.state.active })
+                  }
                 >
                   Oferta
                 </Link>
@@ -84,7 +95,11 @@ class Navbar extends React.Component {
                 <Link
                   className="nav-link"
                   to="/#contact-section"
-                  onClick={() => this.setState({ active: !this.state.active })}
+                  onClick={() =>
+                    window.screen.width <= 998
+                      ? this.setState({ active: !this.state.active })
+                      : this.setState({ active: this.state.active })
+                  }
                 >
                   Kontakt
                 </Link>
