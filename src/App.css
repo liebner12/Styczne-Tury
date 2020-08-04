@@ -18,6 +18,10 @@ html, body {
   margin: 0 0.5rem 0 0;
 }
 
+#landing-page h2, #about-section h2 {
+  font-size: 1.5rem;
+}
+
 /****nav-section****/
 
 #nav-icon {
@@ -101,6 +105,7 @@ html, body {
 
 #top-nav {
   transition: 0.3s;
+  font-weight: 600;
 }
 
 .nav-link {
@@ -112,9 +117,8 @@ html, body {
   backdrop-filter: blur(15px);
 }
 
-
-
 /****home-section****/
+
 #landing-page .carousel-item {
   height: 100vh;
 }
@@ -136,11 +140,10 @@ html, body {
   color: white;
   z-index: 2;
 }
-.carousel-control-next, .carousel-control-prev{
+
+.carousel-control-next, .carousel-control-prev {
   z-index: 3;
 }
-
-
 
 /****about section****/
 
@@ -304,6 +307,7 @@ html, body {
 
 .ending {
   text-align: center;
+  font-weight: 600;
 }
 
 /***item-page***/
@@ -314,10 +318,12 @@ html, body {
   display: flex;
   align-items: center;
 }
-#item-section h1{
+
+#item-section h1 {
   font-weight: 900;
 }
-#item-section .col-md{
+
+#item-section .col-md {
   align-self: center;
 }
 
@@ -333,8 +339,12 @@ html, body {
   object-fit: cover;
 }
 
-
-
+#item-section h2{
+  font-size: 1.5rem;
+}
+#item-section h3{
+  font-size: 1.2rem;
+}
 
 /****media queries****/
 
@@ -380,8 +390,7 @@ html, body {
     grid-gap: 2rem;
     grid-template-rows: 1fr 1fr;
   }
-  .text-grid{
+  .text-grid {
     margin-bottom: 2rem;
   }
-  
 }

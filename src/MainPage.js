@@ -5,7 +5,7 @@ import About from "./components/Main/About.js";
 import Offert from "./components/Main/Offert.js";
 import Footer from "./components/Footer/Footer.js";
 
-class Main extends React.Component {
+class MainPage extends React.Component {
   render() {
     return (
       <div>
@@ -18,4 +18,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default MainPage;

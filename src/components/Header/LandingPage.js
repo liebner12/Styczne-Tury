@@ -46,7 +46,7 @@ class LandingPage extends React.Component {
                 alt="First slide"
               ></img>
               <div className="carousel-caption d-md-block">
-                <h5>Numer 1 w okolicy</h5>
+                <h2>Numer 1 w okolicy</h2>
                 <p>skontaktuj się z nami!</p>
               </div>
             </div>
@@ -57,7 +57,7 @@ class LandingPage extends React.Component {
                 alt="First slide"
               ></img>
               <div className="carousel-caption d-md-block">
-                <h5>Sprawdź naszą ofertę</h5>
+                <h2>Sprawdź naszą ofertę</h2>
                 <p>zawieziemy Ciebie wszędzie!</p>
               </div>
             </div>
@@ -68,7 +68,7 @@ class LandingPage extends React.Component {
                 alt="First slide"
               ></img>
               <div className="carousel-caption d-md-block">
-                <h5>Twoja satyfsakcja</h5>
+                <h2>Twoja satyfsakcja</h2>
                 <p>jest naszym głównym priorytetem</p>
               </div>
             </div>

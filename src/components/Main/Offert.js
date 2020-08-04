@@ -24,7 +24,7 @@ class Offert extends React.Component {
                   <div className="card-img-top st"></div>
                   <div className="overlay text-white">
                     <div className="container">
-                      <h5 className="card-title">Wycieczka do Warszawy</h5>
+                      <h3 className="card-title">Wycieczka do Warszawy</h3>
                       <p className="card-text">
                         Cudowna przygoda w stolicy Polski, zwiedzanie
                         najpiękniejszego miasta europy wschodniej!
@@ -53,7 +53,7 @@ class Offert extends React.Component {
                   <div className="card-img-top nd"></div>
                   <div className="overlay text-white">
                     <div className="container">
-                      <h5 className="card-title">Wycieczka nad morze!</h5>
+                      <h3 className="card-title">Wycieczka nad morze!</h3>
                       <p className="card-text">
                         Najlepsze miejsce do odpoczynku, podmuch wiatru i fale
                         sprawiają, że chce się tam być!
@@ -82,7 +82,7 @@ class Offert extends React.Component {
                   <div className="card-img-top rd"></div>
                   <div className="overlay text-white">
                     <div className="container">
-                      <h5 className="card-title">Wycieczka w góry!</h5>
+                      <h3 className="card-title">Wycieczka w góry!</h3>
                       <p className="card-text">
                         Wspinaczka górska na polkie pasmo gór jest niezwykle
                         urokliwa warto się tam udać!

@@ -9,7 +9,7 @@ class About extends React.Component {
             <div id="first-object">
               <div className="card bg-success text-white">
                 <div className="card-body">
-                  <h5 className="card-title">Bezpieczny transport</h5>
+                  <h2 className="card-title">Bezpieczny transport</h2>
                   <p className="card-text">
                     Nasza doświadczona załoga zawiezie was wszędzie w
                     najbezpieczniejszy możliwy sposób.
@@ -25,7 +25,7 @@ class About extends React.Component {
             <div id="third-object">
               <div className="card bg-success text-white">
                 <div className="card-body">
-                  <h5 className="card-title">Niskie ceny</h5>
+                  <h2 className="card-title">Niskie ceny</h2>
                   <p className="card-text">
                     Celem naszej firmy jest szczęście każdego z was dlatego
                     jesteśmy bezkonkurencyjni cenowo!
@@ -45,7 +45,7 @@ class About extends React.Component {
             <div id="fifth-object">
               <div className="card bg-success text-white">
                 <div className="card-body">
-                  <h5 className="card-title">Pełne doświadczenia</h5>
+                  <h2 className="card-title">Pełne doświadczenia</h2>
                   <p className="card-text">
                     Oferujemy transport, pożywienie, hotel wszystko co
                     potrzebujesz my mamy!
