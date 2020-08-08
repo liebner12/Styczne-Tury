@@ -8,6 +8,7 @@ html, body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   background-color: rgb(233, 230, 227);
+  font-size: 16px;
 }
 
 .my-section {
@@ -16,6 +17,10 @@ html, body {
 
 .btn-gap {
   margin: 0 0.5rem 0 0;
+}
+
+#landing-page h1 {
+  font-weight: 900;
 }
 
 #landing-page h2, #about-section h2 {
@@ -31,6 +36,10 @@ html, body {
 
 .navbar-toggler {
   border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
 }
 
 .animated-icon {
@@ -158,6 +167,7 @@ html, body {
 }
 
 .fade-in {
+  position: relative;
   animation-name: slide-in-left;
   animation-duration: 1s;
 }
@@ -403,11 +413,11 @@ html, body {
 
 @keyframes slide-in-left {
   0% {
-    transform: translateX(-30%);
     opacity: 0;
+    left: -50px;
   }
   100% {
-    transform: translateX(0);
     opacity: 1;
+    left: 0;
   }
 }

@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazyload";
-import busImage from "../images/warsaw-small.jpg";
-import polImage from "../images/baltyk-small.jpg";
-import trainImage from "../images/tatry-small.jpg";
+import warsawImage from "../images/warsaw-small.jpg";
+import baltykImage from "../images/baltyk-small.jpg";
+import tatryImage from "../images/tatry-small.jpg";
+import warsaw from "../images/warsaw.webp";
+import baltyk from "../images/baltyk.webp";
+import tatry from "../images/tatry.webp";
 
 class Offert extends React.Component {
   render() {
@@ -20,8 +23,7 @@ class Offert extends React.Component {
           <div>
             <div className="row">
               <div className="col-md-4">
-                <div className="card bg-dark text-white box">
-                  <div className="card-img-top st"></div>
+                <div className="card bg-dark text-white">
                   <div className="overlay text-white">
                     <div className="container">
                       <h3 className="card-title">Wycieczka do Warszawy</h3>
@@ -31,12 +33,17 @@ class Offert extends React.Component {
                       </p>
                     </div>
                   </div>
-                  <LazyLoad>
-                    <img
-                      className="card-img-top"
-                      src={busImage}
-                      alt="Bus"
-                    ></img>
+                  <LazyLoad once="true" placeholder="color: black">
+                    <picture>
+                      <source srcSet={warsaw} type="image/webp"></source>
+                      <source srcSet={warsawImage} type="image/jpeg"></source>
+                      <img
+                        className="card-img-top"
+                        src={warsawImage}
+                        alt="Bus"
+                        height="320"
+                      ></img>
+                    </picture>
                   </LazyLoad>
                   <div className="card-body">
                     <div className="mybtn">
@@ -49,8 +56,7 @@ class Offert extends React.Component {
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="card bg-dark text-white box">
-                  <div className="card-img-top nd"></div>
+                <div className="card bg-dark text-white">
                   <div className="overlay text-white">
                     <div className="container">
                       <h3 className="card-title">Wycieczka nad morze!</h3>
@@ -61,11 +67,16 @@ class Offert extends React.Component {
                     </div>
                   </div>
                   <LazyLoad>
-                    <img
-                      className="card-img-top"
-                      src={polImage}
-                      alt="Polska"
-                    ></img>
+                    <picture>
+                      <source srcSet={baltyk} type="image/webp"></source>
+                      <source srcSet={baltykImage} type="image/jpeg"></source>
+                      <img
+                        className="card-img-top"
+                        src={baltykImage}
+                        alt="Polska"
+                        height="320"
+                      ></img>
+                    </picture>
                   </LazyLoad>
                   <div className="card-body">
                     <div className="mybtn">
@@ -78,8 +89,7 @@ class Offert extends React.Component {
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="card bg-dark text-white box">
-                  <div className="card-img-top rd"></div>
+                <div className="card bg-dark text-white">
                   <div className="overlay text-white">
                     <div className="container">
                       <h3 className="card-title">Wycieczka w góry!</h3>
@@ -90,11 +100,16 @@ class Offert extends React.Component {
                     </div>
                   </div>
                   <LazyLoad>
-                    <img
-                      className="card-img-top"
-                      src={trainImage}
-                      alt="Pociąg"
-                    ></img>
+                    <picture>
+                      <source srcSet={tatry} type="image/webp"></source>
+                      <source srcSet={tatryImage} type="image/jpeg"></source>
+                      <img
+                        className="card-img-top"
+                        src={tatryImage}
+                        alt="Pociąg"
+                        height="320"
+                      ></img>
+                    </picture>
                   </LazyLoad>
                   <div className="card-body">
                     <div className="mybtn">

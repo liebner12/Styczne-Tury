@@ -1,7 +1,7 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import Item from "./Items";
-import ScrollToTop from "../ScrollToTop"
+import ScrollToTop from "../ScrollToTop";
 class Trip extends React.Component {
   render() {
     return (
@@ -42,31 +42,76 @@ class Trip extends React.Component {
               </ol>
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <img
-                    src={require("../images/item-1-" +
-                      this.props.match.params.id +
-                      ".jpg")}
-                    alt="..."
-                    className="carousel-image"
-                  ></img>
+                <picture>
+                    <source
+                      srcset={require("../images/item-1-" +
+                        this.props.match.params.id +
+                        ".webp")}
+                      type="image/webp"
+                    ></source>
+                    <source
+                      srcset={require("../images/item-1-" +
+                        this.props.match.params.id +
+                        ".jpg")}
+                      type="image/jpeg"
+                    ></source>
+                    <img
+                      src={require("../images/item-1-" +
+                        this.props.match.params.id +
+                        ".jpg")}
+                      className="carousel-image"
+                      alt="trip-proposition"
+                      height="560"
+                    ></img>
+                  </picture>
                 </div>
                 <div className="carousel-item">
-                  <img
-                    src={require("../images/item-2-" +
-                      this.props.match.params.id +
-                      ".jpg")}
-                    className="carousel-image"
-                    alt="..."
-                  ></img>
+                  <picture>
+                    <source
+                      srcset={require("../images/item-2-" +
+                        this.props.match.params.id +
+                        ".webp")}
+                      type="image/webp"
+                    ></source>
+                    <source
+                      srcset={require("../images/item-2-" +
+                        this.props.match.params.id +
+                        ".jpg")}
+                      type="image/jpeg"
+                    ></source>
+                    <img
+                      src={require("../images/item-2-" +
+                        this.props.match.params.id +
+                        ".jpg")}
+                      className="carousel-image"
+                      alt="trip-proposition"
+                      height="560"
+                    ></img>
+                  </picture>
                 </div>
                 <div className="carousel-item">
-                  <img
-                    src={require("../images/item-3-" +
-                      this.props.match.params.id +
-                      ".jpg")}
-                    className="carousel-image"
-                    alt="..."
-                  ></img>
+                <picture>
+                    <source
+                      srcset={require("../images/item-3-" +
+                        this.props.match.params.id +
+                        ".webp")}
+                      type="image/webp"
+                    ></source>
+                    <source
+                      srcset={require("../images/item-3-" +
+                        this.props.match.params.id +
+                        ".jpg")}
+                      type="image/jpeg"
+                    ></source>
+                    <img
+                      src={require("../images/item-3-" +
+                        this.props.match.params.id +
+                        ".jpg")}
+                      className="carousel-image"
+                      alt="trip-proposition"
+                      height="560"
+                    ></img>
+                  </picture>
                 </div>
               </div>
               <a

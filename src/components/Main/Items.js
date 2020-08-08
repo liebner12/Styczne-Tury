@@ -6,7 +6,7 @@ class Item extends Component {
       <div>
         {this.props.params == 1 ? (
           <div>
-            <h1>Wycieczka do Warszawy </h1>
+            <h1>Wycieczka do Warszawy</h1>
             <h2>Koszt dla 20 osób: 15000zł</h2>
             <h3>Czas trwania: 3 dni</h3>
             <p className="description">

@@ -2,6 +2,9 @@ import React from "react";
 import wallpaper3 from "../images/wallpaper-5-small.jpg";
 import wallpaper2 from "../images/wallpaper-6-small.jpg";
 import wallpaper1 from "../images/wallpaper-8-small.jpg";
+import wallpaper3_webp from "../images/wallpaper-5.webp";
+import wallpaper2_webp from "../images/wallpaper-6.webp";
+import wallpaper1_webp from "../images/wallpaper-7.webp";
 import { HashLink as Link } from "react-router-hash-link";
 class LandingPage extends React.Component {
   render() {
@@ -9,9 +12,7 @@ class LandingPage extends React.Component {
       <section id="landing-page">
         <div id="main-text">
           <div className="text-center">
-            <h1 className="display-2 font-weight-bold">
-              Biuro podróży StyczneTury
-            </h1>
+            <h1 className="display-2">Biuro podróży StyczneTury</h1>
             <p className="lead font-weight-bold">
               Jesteśmy najlepsi w tym co robimy!
             </p>
@@ -40,33 +41,45 @@ class LandingPage extends React.Component {
           </ol>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img
-                className="d-block w-100"
-                src={wallpaper1}
-                alt="First slide"
-              ></img>
+              <picture>
+                <source srcset={wallpaper1_webp} type="image/webp"></source>
+                <source srcset={wallpaper1} type="image/jpeg"></source>
+                <img
+                  src={wallpaper1}
+                  alt="First slide"
+                  className="d-block w-100"
+                ></img>
+              </picture>
               <div className="carousel-caption d-md-block">
                 <h2>Numer 1 w okolicy</h2>
                 <p>skontaktuj się z nami!</p>
               </div>
             </div>
             <div className="carousel-item">
-              <img
-                className="d-block w-100"
-                src={wallpaper2}
-                alt="First slide"
-              ></img>
+              <picture>
+                <source srcset={wallpaper2_webp} type="image/webp"></source>
+                <source srcset={wallpaper2} type="image/jpeg"></source>
+                <img
+                  src={wallpaper1}
+                  alt="Second slide"
+                  className="d-block w-100"
+                ></img>
+              </picture>
               <div className="carousel-caption d-md-block">
                 <h2>Sprawdź naszą ofertę</h2>
                 <p>zawieziemy Ciebie wszędzie!</p>
               </div>
             </div>
             <div className="carousel-item">
-              <img
-                className="d-block w-100"
-                src={wallpaper3}
-                alt="First slide"
-              ></img>
+              <picture>
+                <source srcset={wallpaper3_webp} type="image/webp"></source>
+                <source srcset={wallpaper3} type="image/jpeg"></source>
+                <img
+                  src={wallpaper3}
+                  alt="Third slide"
+                  className="d-block w-100"
+                ></img>
+              </picture>
               <div className="carousel-caption d-md-block">
                 <h2>Twoja satyfsakcja</h2>
                 <p>jest naszym głównym priorytetem</p>

@@ -29,7 +29,7 @@ class Navbar extends React.Component {
           <Link className="navbar-brand" to="/#landing-page">
             StyczneTury
           </Link>
-          <a
+          <button
             className="navbar-toggler"
             type="button"
             aria-label="Toggle navigation"
@@ -44,7 +44,7 @@ class Navbar extends React.Component {
               <div></div>
               <div></div>
             </div>
-          </a>
+          </button>
           <div
             className={
               this.state.active ? "navbar-collapse" : "collapse navbar-collapse"
